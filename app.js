@@ -32,3 +32,12 @@ let task_names = tasks.map(
 );
 
 console.log(task_names);
+
+//Using Filter function
+//Filter (item, index, array)
+
+let difficult_tasks = tasks.filter(
+	(task, index, array) => { return task.duration >= 120}
+)
+
+console.log(difficult_tasks)
