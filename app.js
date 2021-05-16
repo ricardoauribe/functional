@@ -41,3 +41,19 @@ let difficult_tasks = tasks.filter(
 )
 
 console.log(difficult_tasks)
+
+//Reduce
+//Reduce (current, prev, index, array)
+let numbers = [1,2,3,4,5,6,7,8,9]
+
+let total = numbers.reduce(function (previous, current) {
+	return previous + current;
+}, 0);
+
+console.log(total)
+
+var total_time = tasks.reduce(function (acc, current) {
+	return acc + current.duration;
+}, 0);
+
+console.log(total_time)
