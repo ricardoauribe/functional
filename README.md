@@ -22,7 +22,7 @@ my_result_array = my_source_array.map(
 
 Also applied to an array, in this case it will receive a function that will
 stablish a criteria that will filter certain elements from the array, the ones
-that return true will be appended to the resulting array
+that return true will be appended to the resulting array.
 
 ```
 my_result_array = my_source_array.filter(
@@ -30,4 +30,24 @@ my_result_array = my_source_array.filter(
 		return item_at_source_array.value > 5
 	}
 )
+```
+
+## Reduce
+
+Applied to an array, with the intention of reducing certain property of the 
+array to an scalable value, it is useful to create aggregations of numeric 
+values. It will receive a function setting the reduction criteria and a initial 
+value for the accumulator, in this example is '0'.
+
+This function will receive the previous and current value at the iteration and
+the body of the function will perform the reduction.
+
+For this last example, the function is anonymous thorugh js arrow functions.
+
+```
+my_result_number = my_source_array.reduce(
+	(current, previous, index, array)=>{
+		return current.value + previous.value
+	}
+, 0)
 ```
