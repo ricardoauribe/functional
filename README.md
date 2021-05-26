@@ -18,4 +18,16 @@ my_result_array = my_source_array.map(
 ```
 
 
-## 
+## Filter
+
+Also applied to an array, in this case it will receive a function that will
+stablish a criteria that will filter certain elements from the array, the ones
+that return true will be appended to the resulting array
+
+```
+my_result_array = my_source_array.filter(
+	function(item_at_source_array, index, array){
+		return item_at_source_array.value > 5
+	}
+)
+```
