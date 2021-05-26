@@ -51,3 +51,16 @@ my_result_number = my_source_array.reduce(
 	}
 , 0)
 ```
+
+## All Together
+
+The true power of these functions come from chaining the together to execute 
+various opperations one after the other and obtaining a final result without 
+the need of creating intermediate containers.
+
+```
+my_result_value = my_source_array
+	.filter((my_array_item) => my_array_item.value > 5)
+	.map((my_array_item) => my_array_item.value * 100)
+	.reduce((prev, curr) => prev + curr, 0)
+```
